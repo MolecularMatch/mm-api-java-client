@@ -99,7 +99,7 @@ public class SearchApi {
       formParams.put("start", ApiInvoker.parameterToString(start));
       formParams.put("limit", ApiInvoker.parameterToString(limit));
       formParams.put("geopoint", ApiInvoker.parameterToString(geopoint));
-      
+      postBody = formParams;
     }
 
     try {
@@ -163,7 +163,7 @@ public class SearchApi {
       formParams.put("apiKey", ApiInvoker.parameterToString(apiKey));
       formParams.put("searchKey", ApiInvoker.parameterToString(searchKey));
       formParams.put("filters", ApiInvoker.parameterToString(filters));
-      
+      postBody = formParams;
     }
 
     try {
@@ -306,7 +306,7 @@ public class SearchApi {
       formParams.put("start", ApiInvoker.parameterToString(start));
       formParams.put("limit", ApiInvoker.parameterToString(limit));
       formParams.put("geopoint", ApiInvoker.parameterToString(geopoint));
-      
+      postBody = formParams;
     }
 
     try {
