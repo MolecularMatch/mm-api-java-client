@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="lib" path="target/lib/jackson-annotations-2.4.2.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-core-2.4.2.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-databind-2.4.2.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-datatype-joda-2.1.5.jar"/>
+	<classpathentry kind="lib" path="target/lib/jersey-client-1.18.jar"/>
+	<classpathentry kind="lib" path="target/lib/jersey-core-1.18.jar"/>
+	<classpathentry kind="lib" path="target/lib/jersey-multipart-1.18.jar"/>
+	<classpathentry kind="lib" path="target/lib/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="target/lib/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="target/lib/mimepull-1.9.3.jar"/>
+	<classpathentry kind="lib" path="target/lib/swagger-annotations-1.5.3-M1.jar"/>
+	<classpathentry kind="lib" path="target/swagger-java-client-1.0.0-tests.jar"/>
+	<classpathentry kind="lib" path="target/swagger-java-client-1.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
