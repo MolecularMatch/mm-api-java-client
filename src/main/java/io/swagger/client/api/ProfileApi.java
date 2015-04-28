@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class ProfileApi {
-  String basePath = "http://127.0.0.1:3000/v1";
+  String basePath = "https://api.molecularmatch.com/v1";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public ApiInvoker getInvoker() {
