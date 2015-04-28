@@ -7,6 +7,7 @@ import io.swagger.client.model.*;
 
 import java.util.*;
 
+import io.swagger.client.model.FeedbackResponse;
 
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.multipart.file.FileDataBodyPart;
@@ -42,9 +43,9 @@ public class FeedbackApi {
    * @param drugId id of the drug that was in error
    * @param reason the reason the drug was in error
    * @param message optional message to explain why the drug was in error
-   * @return void
+   * @return FeedbackResponse
    */
-  public void ReportDrugProblem (String apiKey, String searchKey, String drugId, String reason, String message) throws ApiException {
+  public FeedbackResponse ReportDrugProblem (String apiKey, String searchKey, String drugId, String reason, String message) throws ApiException {
     Object postBody = null;
     
 
@@ -92,16 +93,16 @@ public class FeedbackApi {
       formParams.put("drugId", ApiInvoker.parameterToString(drugId));
       formParams.put("reason", ApiInvoker.parameterToString(reason));
       formParams.put("message", ApiInvoker.parameterToString(message));
-      
+      postBody = formParams;
     }
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return ;
+        return (FeedbackResponse) ApiInvoker.deserialize(response, "", FeedbackResponse.class);
       }
       else {
-        return ;
+        return null;
       }
     } catch (ApiException ex) {
       throw ex;
@@ -113,9 +114,9 @@ public class FeedbackApi {
    * Get a reported problem
    * @param apiKey key provided by MolecularMatch to use the api
    * @param id id provided by MolecularMatch on a previous report problem call
-   * @return void
+   * @return FeedbackResponse
    */
-  public void GetProblem (String apiKey, String id) throws ApiException {
+  public FeedbackResponse GetProblem (String apiKey, String id) throws ApiException {
     Object postBody = null;
     
 
@@ -153,10 +154,10 @@ public class FeedbackApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return ;
+        return (FeedbackResponse) ApiInvoker.deserialize(response, "", FeedbackResponse.class);
       }
       else {
-        return ;
+        return null;
       }
     } catch (ApiException ex) {
       throw ex;
@@ -171,9 +172,9 @@ public class FeedbackApi {
    * @param trialId id of the trial that was in error
    * @param reason the reason the trial was in error
    * @param message optional message to explain why the trial was in error
-   * @return void
+   * @return FeedbackResponse
    */
-  public void ReportTrialProblem (String apiKey, String searchKey, String trialId, String reason, String message) throws ApiException {
+  public FeedbackResponse ReportTrialProblem (String apiKey, String searchKey, String trialId, String reason, String message) throws ApiException {
     Object postBody = null;
     
 
@@ -221,16 +222,16 @@ public class FeedbackApi {
       formParams.put("trialId", ApiInvoker.parameterToString(trialId));
       formParams.put("reason", ApiInvoker.parameterToString(reason));
       formParams.put("message", ApiInvoker.parameterToString(message));
-      
+      postBody = formParams;
     }
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return ;
+        return (FeedbackResponse) ApiInvoker.deserialize(response, "", FeedbackResponse.class);
       }
       else {
-        return ;
+        return null;
       }
     } catch (ApiException ex) {
       throw ex;
@@ -244,9 +245,9 @@ public class FeedbackApi {
    * @param id id provided by MolecularMatch on a previous report problem call
    * @param reason the reason the trial was in error
    * @param message optional message to explain why the trial was in error
-   * @return void
+   * @return FeedbackResponse
    */
-  public void PutProblem (String apiKey, String id, String reason, String message) throws ApiException {
+  public FeedbackResponse PutProblem (String apiKey, String id, String reason, String message) throws ApiException {
     Object postBody = null;
     
 
@@ -290,16 +291,16 @@ public class FeedbackApi {
       formParams.put("id", ApiInvoker.parameterToString(id));
       formParams.put("reason", ApiInvoker.parameterToString(reason));
       formParams.put("message", ApiInvoker.parameterToString(message));
-      
+      postBody = formParams;
     }
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return ;
+        return (FeedbackResponse) ApiInvoker.deserialize(response, "", FeedbackResponse.class);
       }
       else {
-        return ;
+        return null;
       }
     } catch (ApiException ex) {
       throw ex;
